@@ -38,6 +38,8 @@ export const sortImgType = (event) => {
       return (
         <image width={225} height={120} alt="travel" src="/image/travel.jpeg" />
       );
+    default:
+      return;
   }
 };
 

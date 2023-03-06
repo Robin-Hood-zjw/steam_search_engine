@@ -1,0 +1,16 @@
+.site_layout_background {
+  display: flex;
+  margin: 20px 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.main_area {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}

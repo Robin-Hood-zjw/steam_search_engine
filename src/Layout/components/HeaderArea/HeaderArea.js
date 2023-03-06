@@ -1,19 +1,29 @@
-import { Layout, Button } from "antd";
 import React from "react";
+import { Layout, Button } from "antd";
 import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
 
-const HeaderArea = (collapsed, setCollapsed) => {
+import "./HeaderArea.css";
+
+const HeaderArea = (props) => {
   return (
     <Layout.Header className="header-background header-layout">
-      {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
-        className: "trigger",
-        onClick: () => setCollapsed(!collapsed),
-      })}
+      <section>
+        {React.createElement(
+          props.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
+          {
+            className: "trigger",
+            onClick: () => {
+              props.toggle();
+            },
+          }
+        )}
+      </section>
 
       <section className="buttons">
         <Button className="popup-button" type="primary">
           Login
         </Button>
+
         <Button className="popup-button" type="primary">
           Sign Up
         </Button>

@@ -1,5 +1,5 @@
-import { Avatar, List, Space } from "antd";
 import React from "react";
+import { Avatar, List, Space } from "antd";
 import { StarOutlined, LikeOutlined, MessageOutlined } from "@ant-design/icons";
 
 const data = Array.from({
@@ -13,12 +13,14 @@ const data = Array.from({
   content:
     "We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.",
 }));
+
 const IconText = ({ icon, text }) => (
   <Space>
     {React.createElement(icon)}
     {text}
   </Space>
 );
+
 const GamesList = () => (
   <List
     itemLayout="vertical"
