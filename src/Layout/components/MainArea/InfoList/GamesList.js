@@ -2,6 +2,8 @@ import React from "react";
 import { Avatar, List, Space } from "antd";
 import { StarOutlined, LikeOutlined, MessageOutlined } from "@ant-design/icons";
 
+import styles from "./index.module.scss";
+
 const data = Array.from({
   length: 23,
 }).map((_, i) => ({
@@ -15,7 +17,7 @@ const data = Array.from({
 }));
 
 const IconText = ({ icon, text }) => (
-  <Space>
+  <Space className={styles.game_description}>
     {React.createElement(icon)}
     {text}
   </Space>
@@ -26,44 +28,33 @@ const GamesList = () => (
     itemLayout="vertical"
     size="large"
     pagination={{
-      onChange: (page) => {
-        console.log(page);
-      },
       pageSize: 3,
     }}
     dataSource={data}
-    footer={
-      <div>
-        <b>ant design</b> footer part
-      </div>
-    }
     renderItem={(item) => (
       <List.Item
         key={item.title}
         actions={[
           <IconText
+            className={styles.game_description}
             icon={StarOutlined}
             text="156"
             key="list-vertical-star-o"
           />,
           <IconText
+            className={styles.game_description}
             icon={LikeOutlined}
             text="156"
             key="list-vertical-like-o"
           />,
           <IconText
+            className={styles.game_description}
             icon={MessageOutlined}
             text="2"
             key="list-vertical-message"
           />,
         ]}
-        extra={
-          <img
-            width={272}
-            alt="logo"
-            src="https://gw.alipayobjects.com/zos/rmsportal/mqaQswcyDLcXyDKnZfES.png"
-          />
-        }
+        extra={<img width={272} alt="logo" src={"/profile.png"} />}
       >
         <List.Item.Meta
           avatar={<Avatar src={item.avatar} />}
