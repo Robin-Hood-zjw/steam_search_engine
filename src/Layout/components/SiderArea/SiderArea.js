@@ -1,9 +1,9 @@
 import { Layout, Menu } from "antd";
 import React from "react";
 import {
-  UploadOutlined,
   UserOutlined,
-  VideoCameraOutlined,
+  HistoryOutlined,
+  UnorderedListOutlined,
 } from "@ant-design/icons";
 
 import styles from "./index.module.scss";
@@ -22,18 +22,18 @@ const SiderArea = (props) => {
         items={[
           {
             key: "1",
-            label: "nav 1",
-            icon: <UserOutlined />,
+            label: "General Info",
+            icon: <UnorderedListOutlined />,
           },
           {
             key: "2",
-            label: "nav 2",
-            icon: <VideoCameraOutlined />,
+            label: "Personal Info",
+            icon: <UserOutlined />,
           },
           {
             key: "3",
-            label: "nav 3",
-            icon: <UploadOutlined />,
+            label: "History",
+            icon: <HistoryOutlined />,
           },
         ]}
       />
