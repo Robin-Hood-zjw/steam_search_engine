@@ -22,7 +22,7 @@
 .buttons {
   width: 150px;
   display: flex;
-  margin-right: 5px;
+  margin-right: 0px;
   justify-content: center;
   align-items: center;
 }
@@ -31,5 +31,5 @@
   width: 88px;
   border-radius: 10px;
   align-items: center;
-  margin-right: 10px;
+  /* margin-right: 10px; */
 }

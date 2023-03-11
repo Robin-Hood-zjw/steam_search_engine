@@ -1,9 +1,8 @@
 import React from "react";
-import { Form, Input, Button, Checkbox } from "antd";
+import { Form, Input, Button } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 
-// import "./index.css";
-import "antd/dist/antd.css";
+import styles from "./index.module.scss";
 
 const Login = () => {
   const onFinish = (values) => {
@@ -13,7 +12,7 @@ const Login = () => {
   return (
     <Form
       name="normal_login"
-      className="login-form"
+      className={styles.login_form}
       initialValues={{
         remember: true,
       }}
@@ -48,21 +47,15 @@ const Login = () => {
           placeholder="Password"
         />
       </Form.Item>
-      <Form.Item>
-        <Form.Item name="remember" valuePropName="checked" noStyle>
-          <Checkbox>Remember me</Checkbox>
-        </Form.Item>
-
-        <a className="login-form-forgot" href="">
-          Forgot password
-        </a>
-      </Form.Item>
 
       <Form.Item>
-        <Button type="primary" htmlType="submit" className="login-form-button">
+        <Button
+          type="primary"
+          htmlType="submit"
+          className={styles.login_form_button}
+        >
           Log in
         </Button>
-        Or <a href="">register now!</a>
       </Form.Item>
     </Form>
   );

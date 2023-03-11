@@ -1,0 +1,14 @@
+.login_form {
+  display: flex;
+  max-width: 300px;
+  align-items: flex-start;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  padding: 3px;
+}
+.login_form_forgot {
+  float: right;
+}
+.login_form_button {
+  width: 100%;
+}

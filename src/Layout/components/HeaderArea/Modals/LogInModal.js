@@ -1,6 +1,6 @@
 import { Modal } from "antd";
 
-import Login from "./services/Login";
+import Login from "./Login";
 
 const LoginModal = (props) => {
   return (
@@ -11,7 +11,6 @@ const LoginModal = (props) => {
       confirmLoading={props.loadStatus}
       onCancel={props.onCancel}
     >
-      <p>{props.text}</p>
       <Login />
     </Modal>
   );
