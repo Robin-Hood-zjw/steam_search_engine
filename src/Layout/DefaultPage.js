@@ -16,12 +16,12 @@ const LayoutPage = () => {
     console.log("I am here.");
   };
 
-  // useEffect(() => {
-  //   axios
-  //     .get("https://gamesothis.herokuapp.com/user/76561198030764668")
-  //     .then((res) => JSON.parse(res))
-  //     .catch((err) => console.log(err));
-  // });
+  useEffect(() => {
+    axios
+      .get("https://gamesothis.herokuapp.com/user/76561198030764668")
+      .then((res) => JSON.parse(res))
+      .catch((err) => console.log(err));
+  });
 
   return (
     <Layout>
