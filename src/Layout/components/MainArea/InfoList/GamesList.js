@@ -30,9 +30,20 @@ const GamesList = () => {
             score: ele[3],
             avatar: `https://joesch.moe/api/v1/random?key=${i}`,
             description: `Developer: ${ele[4]
+              .slice(
+                0,
+                ele[4].indexOf("(") !== -1 ? ele[4].indexOf("(") : ele[4].length
+              )
               .split(",")
-              .join(", ")}     |     Publish Date: ${ele[2]}     |     Genre: ${
-              ele[5]
+              .join(", ")}     |     Publish Date: ${
+              ele[2]
+            }     |     Genre: ${ele[5].split(",").join(", ")}${
+              ele[4].indexOf("(") !== -1
+                ? `     |     Operating System: ${ele[4].slice(
+                    ele[4].indexOf("(") + 1,
+                    ele[4].length - 1
+                  )}`
+                : ""
             }`,
             content:
               ele[1].length > 500 ? `${ele[1].slice(0, 501)} ...` : ele[1],
