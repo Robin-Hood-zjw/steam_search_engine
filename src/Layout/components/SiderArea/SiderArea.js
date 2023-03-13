@@ -25,16 +25,16 @@ const SiderArea = (props) => {
             label: "General Info",
             icon: <UnorderedListOutlined />,
           },
-          {
-            key: "2",
-            label: "Personal Info",
-            icon: <UserOutlined />,
-          },
-          {
-            key: "3",
-            label: "History",
-            icon: <HistoryOutlined />,
-          },
+          // {
+          //   key: "2",
+          //   label: "Personal Info",
+          //   icon: <UserOutlined />,
+          // },
+          // {
+          //   key: "3",
+          //   label: "History",
+          //   icon: <HistoryOutlined />,
+          // },
         ]}
       />
     </Sider>

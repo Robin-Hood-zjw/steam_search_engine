@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Avatar, List, Space } from "antd";
-import { StarOutlined, LikeOutlined, MessageOutlined } from "@ant-design/icons";
+import { List, Space } from "antd";
+import { NumberOutlined } from "@ant-design/icons";
 
 import styles from "./index.module.scss";
 
@@ -29,8 +29,13 @@ const GamesList = () => {
             title: ele[0],
             score: ele[3],
             avatar: `https://joesch.moe/api/v1/random?key=${i}`,
-            description: ele[4],
-            content: ele[1],
+            description: `Developer: ${ele[4]
+              .split(",")
+              .join(", ")}     |     Publish Date: ${ele[2]}     |     Genre: ${
+              ele[5]
+            }`,
+            content:
+              ele[1].length > 500 ? `${ele[1].slice(0, 501)} ...` : ele[1],
           };
         });
         setGameList(gameData);
@@ -56,14 +61,14 @@ const GamesList = () => {
           actions={[
             <IconText
               className={styles.game_description}
-              icon={StarOutlined}
+              icon={NumberOutlined}
               text={item.score}
               key="list-vertical-star-o"
             />,
           ]}
         >
           <List.Item.Meta
-            avatar={<Avatar src={item.avatar} />}
+            // avatar={<Avatar src={item.avatar} />}
             title={<a href={item.href}>{item.title}</a>}
             description={item.description}
           />
