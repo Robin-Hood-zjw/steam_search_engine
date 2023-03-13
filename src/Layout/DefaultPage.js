@@ -1,6 +1,5 @@
-import axios from "axios";
 import { Layout } from "antd";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import "../index.css";
 
@@ -15,13 +14,6 @@ const LayoutPage = () => {
     setCollapsed(!collapsed);
     console.log("I am here.");
   };
-
-  useEffect(() => {
-    axios
-      .get("https://gamesothis.herokuapp.com/user/76561198030764668")
-      .then((res) => JSON.parse(res))
-      .catch((err) => console.log(err));
-  });
 
   return (
     <Layout>
