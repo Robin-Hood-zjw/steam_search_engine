@@ -18,9 +18,13 @@ const GamesList = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        // const res = await axios.get(
+        //   "https://gamesothis.herokuapp.com/user/76561198345197403"
+        // );
         const res = await axios.get(
-          "https://gamesothis.herokuapp.com/user/76561198345197403"
-        );
+          "http://localhost:3080/user", { crossdomain: true }
+        )
+
         console.log(res);
         const info = res.data.data;
         const gameData = info.map((ele, i) => {
