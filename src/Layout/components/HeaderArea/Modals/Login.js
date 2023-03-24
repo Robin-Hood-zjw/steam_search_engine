@@ -59,7 +59,9 @@ const Login = () => {
   //     </Form.Item>
   //   </Form>
   // );
-  return <a href="http://localhost:3080/api/auth/steam">Sign in</a>
+
+  //return <a href="http://localhost:3080/api/auth/steam">Sign in</a>
+  return <a href="http://ec2-54-197-97-107.compute-1.amazonaws.com:3080/api/auth/steam">Sign in</a>
 };
 
 export default Login;
