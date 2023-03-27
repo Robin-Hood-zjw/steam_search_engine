@@ -38,12 +38,22 @@ const HeaderArea = (props) => {
         )}
       </section>
 
-      <section className="buttons">
+      {/* <section className="buttons">
         <Button className="popup-button" type="primary" onClick={showLogin}>
           Login
         </Button>
-      </section>
+      </section> */}
 
+      <section className="buttons">
+        <Button className="popup-button" type="primary">
+          <a href="https://game-sothis-backend.herokuapp.com/api/auth/steam">Sign in</a>
+        </Button>
+
+        <Button className="popup-button" type="error">
+          <a href="https://game-sothis-backend.herokuapp.com/signout">Sign out</a>
+        </Button>
+      </section>
+      
       <LoginModal
         open={openLogin}
         onOk={handleLoginOk}

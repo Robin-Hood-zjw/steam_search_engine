@@ -22,8 +22,9 @@ const GamesList = () => {
         //   "https://gamesothis.herokuapp.com/user/76561198345197403"
         // );
         const res = await axios.get(
-          "http://ec2-54-197-97-107.compute-1.amazonaws.com:3080/user", { crossdomain: true }
+          //"https://92fa-54-197-97-107.ngrok.io/user", 
           //"http://localhost:3080/user", { crossdomain: true }
+          "https://game-sothis-backend.herokuapp.com/user"
         )
 
         console.log(res);
