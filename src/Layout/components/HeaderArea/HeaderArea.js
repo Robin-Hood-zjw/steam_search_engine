@@ -38,6 +38,10 @@ const HeaderArea = (props) => {
         )}
       </section>
 
+      <Button className="popup-button" type="primary" onClick={showLogin}>
+        Login
+      </Button>
+
       <section className="buttons">
         <Button className="popup-button" type="primary" onClick={showLogin}>
           Login

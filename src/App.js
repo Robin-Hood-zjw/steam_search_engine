@@ -1,11 +1,11 @@
 import "./App.css";
 
-import LayoutPage from "./Layout/DefaultPage";
+import DefaultLayout from "./Layout/DefaultLayout";
 
 function App() {
   return (
     <div>
-      <LayoutPage />
+      <DefaultLayout />
     </div>
   );
 }
