@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { List, Space } from "antd";
+import { List, Space, Avatar, Image } from "antd";
 import { NumberOutlined } from "@ant-design/icons";
 
 import styles from "./index.module.scss";
 
-const IconText = ({ icon, text }) => (
+const IconText = ({ icon, text, imageURL }) => (
   <Space className={styles.game_description}>
     {React.createElement(icon)}
     {text}
+    <Image width={200} src={imageURL}/>
   </Space>
 );
 
@@ -31,17 +32,17 @@ const GamesList = () => {
         const info = res.data.data;
         const gameData = info.map((ele, i) => {
           return {
-            href: "https://ant.design",
+            href: "https://www.metacritic.com" + ele[2],
             title: ele[0],
-            score: ele[3],
-            avatar: `https://joesch.moe/api/v1/random?key=${i}`,
-            description: `Developer: ${ele[4]
+            score: ele[5],
+            image: `https://steamcdn-a.akamaihd.net/steam/apps/${ele[1]}/library_600x900_2x.jpg`,
+            description: `Developer: ${ele[6]
               .split(",")
-              .join(", ")}     |     Publish Date: ${ele[2]}     |     Genre: ${
-              ele[5]
+              .join(", ")}     |     Publish Date: ${ele[4]}     |     Genre: ${
+              ele[7]
             }`,
             content:
-              ele[1].length > 500 ? `${ele[1].slice(0, 501)} ...` : ele[1],
+              ele[3].length > 500 ? `${ele[3].slice(0, 501)} ...` : ele[3],
           };
         });
         setGameList(gameData);
@@ -74,8 +75,9 @@ const GamesList = () => {
           ]}
         >
           <List.Item.Meta
-            // avatar={<Avatar src={item.avatar} />}
+            avatar={<Avatar src={item.avatar} />}
             title={<a href={item.href}>{item.title}</a>}
+            imageURL={item.image}
             description={item.description}
           />
           {item.content}
