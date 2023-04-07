@@ -11,7 +11,6 @@ import LoginModal from "./Modals/LogInModal";
 const HeaderArea = (props) => {
   const [openLogin, setOpenLogin] = useState(false);
   const [loadLogin, setLoadLogin] = useState(false);
-  const [isLoggedIn, setIsLoggedin] = useState(false);
 
   const showLogin = () => {
     setOpenLogin(true);
@@ -30,13 +29,7 @@ const HeaderArea = (props) => {
     setOpenLogin(false);
   };
 
-  const handleLogin = () => {
-    setIsLoggedin(false);
-  };
 
-  const handleLogout = () => {
-    setIsLoggedin(true);
-  };
 
   return (
     <Layout.Header className="header-background header-layout">
@@ -65,29 +58,18 @@ const HeaderArea = (props) => {
       </section>      */}
 
       <section className="buttons">
-        <Button className="popup-button" type="primary" onClick={handleLogout}>
+        <Button className="popup-button" type="primary" >
                   {/* <a href="https://game-sothis-backend.herokuapp.com/api/auth/steam"> Sign in</a> */}
                   <FontAwesomeIcon icon={faSteam} />
                   <a href="http://localhost:3080/api/auth/steam"> Sign in</a>
 
         </Button>
-        
-        {
-          isLoggedIn 
-            ? (
-                <Button className="popup-button" onClick={handleLogin}>
+
+        <Button className="popup-button" >
                   {/* <a href="https://game-sothis-backend.herokuapp.com/logout">Sign out</a> */}
                   <a href="http://localhost:3080/logout">Sign out</a>
-                </Button>
-              
-              )
-            : ( 
-                <Button className="popup-button" type="primary" onClick={handleLogout}>
-                  {/* <a href="https://game-sothis-backend.herokuapp.com/api/auth/steam">Sign in</a> */}
-                  <a href="http://localhost:3080/api/auth/steam">Sign in</a>
-                </Button>
-              )
-        }
+        </Button>        
+  
 
         {/* <Button className="popup-button" type="primary">
           <a href="https://game-sothis-backend.herokuapp.com/api/auth/steam">Sign in</a>
