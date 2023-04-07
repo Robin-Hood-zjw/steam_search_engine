@@ -33,7 +33,7 @@ const HeaderArea = (props) => {
 
   return (
     <Layout.Header className="header-background header-layout">
-
+        <FontAwesomeIcon icon={faSteam} />
       <section className="buttons">
         <Button className="popup-button" type="primary" >
                   {/* <a href="https://game-sothis-backend.herokuapp.com/api/auth/steam"> Sign in</a> */}
