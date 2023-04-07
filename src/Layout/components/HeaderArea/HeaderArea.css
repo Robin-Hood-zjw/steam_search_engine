@@ -22,14 +22,13 @@
 .buttons {
   width: 150px;
   display: flex;
-  margin-right: 0px;
-  justify-content: center;
+  margin-right: 10px;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .popup-button {
   width: 88px;
   border-radius: 10px;
   align-items: center;
-  /* margin-right: 10px; */
 }
