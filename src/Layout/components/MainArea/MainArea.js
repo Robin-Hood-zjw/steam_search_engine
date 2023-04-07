@@ -4,7 +4,7 @@ import { Col, Row } from "antd";
 
 import styles from "./index.module.scss";
 import GamesList from "./InfoList/GamesList";
-// import SearchBar from "./InfoDetails/SearchBar";
+import SearchBar from "./InfoDetails/SearchBar";
 
 const MainArea = () => {
   return (

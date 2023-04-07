@@ -15,7 +15,10 @@
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "express-session": "^1.17.3",
+<<<<<<< HEAD
+=======
     "http-proxy-middleware": "^2.0.6",
+>>>>>>> db6c4b15dd015aaf64cff7250f58e21949122ed3
     "passport": "^0.6.0",
     "passport-steam": "^1.0.17",
     "rc-tween-one": "^3.0.6",

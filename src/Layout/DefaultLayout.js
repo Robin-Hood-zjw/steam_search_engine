@@ -7,7 +7,7 @@ import MainArea from "./components/MainArea/MainArea";
 import SiderArea from "./components/SiderArea/SiderArea";
 import HeaderArea from "./components/HeaderArea/HeaderArea";
 
-const LayoutPage = () => {
+const DefaultLayout = () => {
   const [collapsed, setCollapsed] = useState(false);
 
   const toggle = () => {
@@ -27,4 +27,4 @@ const LayoutPage = () => {
   );
 };
 
-export default LayoutPage;
+export default DefaultLayout;
