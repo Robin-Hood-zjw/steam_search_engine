@@ -33,23 +33,6 @@ const HeaderArea = (props) => {
 
   return (
     <Layout.Header className="header-background header-layout">
-      <section>
-        {React.createElement(
-          props.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined,
-          {
-            className: "trigger",
-            onClick: () => {
-              props.toggle();
-            },
-          }
-        )}
-      </section>
-      
-      {/* <section className="buttons">
-        <Button className="popup-button" type="primary">
-            Recommend
-        </Button>
-      </section>      */}
 
       <section className="buttons">
         <Button className="popup-button" type="primary" >
