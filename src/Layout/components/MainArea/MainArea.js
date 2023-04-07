@@ -13,9 +13,6 @@ const MainArea = () => {
         <Col lg={24} md={24} sm={24}>
           <GamesList />
         </Col>
-        {/* <Col lg={10} md={24} sm={24}>
-          <SearchBar />
-        </Col> */}
       </Row>
     </Layout.Content>
   );
