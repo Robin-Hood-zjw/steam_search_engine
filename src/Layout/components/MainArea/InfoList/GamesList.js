@@ -4,15 +4,15 @@ import { List, Space, Tag } from "antd";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRankingStar } from '@fortawesome/free-solid-svg-icons'
 import styles from "./index.module.scss";
+import Tags from "./Tags";
 
-const IconText = ({ icon, text }) => (
+const IconText = ({ icon, text, genres }) => (
     <Space className={styles.txt_area}>
       {icon}
       {text}
+      {<Tags genres={genres}/> }     
     </Space>
 );
-
-const { CheckableTag } = Tag;
 
 const DEFAULT_IMG="https://steamcdn-a.akamaihd.net/steam/apps/220/library_600x900_2x.jpg"
 
@@ -34,15 +34,16 @@ const GamesList = () => {
       const info = res.data.data;
       const gameData = info.map((ele, i) => {
         const developer = ele[6].split(",").join(", ");
-        const genres = ele[7].split(",").join(", "); 
+        const genres = ele[7].split(","); 
         const contents = ele[3].length > 500 ? `${ele[3].slice(0, 501)} ...` : ele[3];
 
         return {
           href: "https://www.metacritic.com" + ele[2],
           title: ele[0],
           score: ele[5],
+          genres: genres,
           image: `https://steamcdn-a.akamaihd.net/steam/apps/${ele[1]}/library_600x900_2x.jpg`,
-          description: `Developer: ${developer}     |     Publish Date: ${ele[4]}     |     Genre: ${genres}`,
+          description: `Developer: ${developer}     |     Publish Date: ${ele[4]}`,
           content: contents
         };
       });
@@ -73,6 +74,7 @@ const GamesList = () => {
               className={styles.game_description}
               icon={<FontAwesomeIcon icon={faRankingStar} />}
               text={item.score}
+              genres={item.genres}
               imageURL={item.image}
               key="list-vertical-star-o"
             />,
@@ -92,7 +94,7 @@ const GamesList = () => {
             description={item.description}
           />
           {item.content}
-        </List.Item>
+          </List.Item>
       )}
     />
   );
