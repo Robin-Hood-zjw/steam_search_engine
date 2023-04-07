@@ -62,6 +62,10 @@ const HeaderArea = (props) => {
       </section>      */}
 
       <section className="buttons">
+      <Button className="popup-button" type="primary" onClick={handleLogout}>
+                {/* <a href="https://game-sothis-backend.herokuapp.com/api/auth/steam">Sign in</a> */}
+                <a href="http://localhost:3080/api/auth/steam">Sign in</a>
+        </Button>
       {
         isLoggedIn 
           ? (

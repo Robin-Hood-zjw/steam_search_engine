@@ -1,3 +1,18 @@
 .game_description {
+  display: inline;
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.txt_area {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 10px;
   font-size: 15px;
+}
+
+.img_area {
+  margin: 5px
 }
