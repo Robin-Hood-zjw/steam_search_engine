@@ -53,12 +53,6 @@ const HeaderArea = (props) => {
       </section>
       
       {/* <section className="buttons">
-        <Button className="popup-button" type="primary" onClick={showLogin}>
-          Login
-        </Button>
-      </section> */}
-      
-      {/* <section className="buttons">
         <Button className="popup-button" type="primary">
             Recommend
         </Button>

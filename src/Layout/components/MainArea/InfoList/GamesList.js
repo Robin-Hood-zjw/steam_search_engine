@@ -76,6 +76,7 @@ const GamesList = () => {
               text={item.score}
               genres={item.genres}
               imageURL={item.image}
+
               key="list-vertical-star-o"
             />,
           ]}
