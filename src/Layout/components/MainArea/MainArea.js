@@ -4,7 +4,6 @@ import { Col, Row } from "antd";
 
 import styles from "./index.module.scss";
 import GamesList from "./InfoList/GamesList";
-import SearchBar from "./InfoDetails/SearchBar";
 
 const MainArea = () => {
   return (
@@ -13,9 +12,6 @@ const MainArea = () => {
         <Col lg={24} md={24} sm={24}>
           <GamesList />
         </Col>
-        {/* <Col lg={10} md={24} sm={24}>
-          <SearchBar />
-        </Col> */}
       </Row>
     </Layout.Content>
   );

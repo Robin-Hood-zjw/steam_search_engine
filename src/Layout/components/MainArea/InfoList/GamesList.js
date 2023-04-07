@@ -35,7 +35,7 @@ const GamesList = () => {
       const gameData = info.map((ele, i) => {
         const developer = ele[6].split(",").join(", ");
         const genres = ele[7].split(","); 
-        const contents = ele[3].length > 500 ? `${ele[3].slice(0, 501)} ...` : ele[3];
+        const contents = ele[3].length > 500 ? `${ele[3].slice(0, 751)} ...` : ele[3];
 
         return {
           href: "https://www.metacritic.com" + ele[2],
