@@ -4,7 +4,7 @@ module.exports = function(app) {
   app.use(
     '/api',
     createProxyMiddleware({
-      target: 'http://localhost:3080',
+      target: 'https://game-sothis-backend.herokuapp.com',
       changeOrigin: true,
     })
   );
