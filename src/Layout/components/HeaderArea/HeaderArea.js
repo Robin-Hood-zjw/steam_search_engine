@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { Layout, Button } from "antd";
 import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSteam } from '@fortawesome/free-brands-svg-icons'
-
+import { faSteam } from "@fortawesome/free-brands-svg-icons";
 
 import "./HeaderArea.css";
 import LoginModal from "./Modals/LogInModal";
@@ -29,24 +28,21 @@ const HeaderArea = (props) => {
     setOpenLogin(false);
   };
 
-
-
   return (
     <Layout.Header className="header-background header-layout">
-        <FontAwesomeIcon icon={faSteam} />
-      <section className="buttons">
-        <Button className="popup-button" type="primary" >
-                  {/* <a href="https://game-sothis-backend.herokuapp.com/api/auth/steam"> Sign in</a> */}
-                  <FontAwesomeIcon icon={faSteam} />
-                  <a href="http://localhost:3080/api/auth/steam"> Sign in</a>
+      <FontAwesomeIcon icon={faSteam} className="icon" />
 
+      <section className="buttons">
+        <Button className="popup-button" type="primary">
+          {/* <a href="https://game-sothis-backend.herokuapp.com/api/auth/steam"> Sign in</a> */}
+          <FontAwesomeIcon icon={faSteam} />
+          <a href="http://localhost:3080/api/auth/steam"> Sign in</a>
         </Button>
 
-        <Button className="popup-button" >
-                  {/* <a href="https://game-sothis-backend.herokuapp.com/logout">Sign out</a> */}
-                  <a href="http://localhost:3080/logout">Sign out</a>
-        </Button>        
-  
+        <Button className="popup-button">
+          {/* <a href="https://game-sothis-backend.herokuapp.com/logout">Sign out</a> */}
+          <a href="http://localhost:3080/logout">Sign out</a>
+        </Button>
 
         {/* <Button className="popup-button" type="primary">
           <a href="https://game-sothis-backend.herokuapp.com/api/auth/steam">Sign in</a>
@@ -56,7 +52,7 @@ const HeaderArea = (props) => {
           <a href="https://game-sothis-backend.herokuapp.com/signout">Sign out</a>
         </Button> */}
       </section>
-      
+
       <LoginModal
         open={openLogin}
         onOk={handleLoginOk}
