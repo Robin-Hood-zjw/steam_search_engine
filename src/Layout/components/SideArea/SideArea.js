@@ -55,8 +55,8 @@ const { Sider } = Layout;
 const SiderArea = (props) => {
   return (
     <Sider trigger={null} collapsible collapsed={props.collapsed}>
-      <FontAwesomeIcon icon={faSteam} className={styles.logo} />
-      {/* <img className={styles.logo} src={"/logo.png"} alt={"hhh"} /> */}
+      {/* <FontAwesomeIcon icon={faSteam} className={styles.logo} /> */}
+      <img className={styles.logo} src={"/logo.jpeg"} alt={"hhh"} />
 
       <Menu
         theme="dark"
