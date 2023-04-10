@@ -58,7 +58,7 @@ const SiderArea = (props) => {
       {/* <FontAwesomeIcon icon={faSteam} className={styles.logo} /> */}
       <img className={styles.logo} src={"/logo.jpeg"} alt={"hhh"} />
 
-      <Menu
+      {/* <Menu
         theme="dark"
         mode="inline"
         defaultSelectedKeys={["1"]}
@@ -80,7 +80,7 @@ const SiderArea = (props) => {
             },
           },
         ]}
-      />
+      /> */}
     </Sider>
   );
 };
