@@ -27,6 +27,7 @@
   margin-right: 10px;
   align-items: center;
   justify-content: flex-end;
+  padding: 15px;
 }
 
 .popup-button {
@@ -36,5 +37,5 @@
 }
 
 .icon {
-  width: 100px;
+  width: 300px;
 }

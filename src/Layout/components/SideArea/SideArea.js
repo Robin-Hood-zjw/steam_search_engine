@@ -11,7 +11,7 @@
 // const SiderArea = () => {
 //   return (
 //     <Layout.Sider >
-      
+
 //       <Layout.Menu
 //         // theme="dark"
 //         // mode="inline"
@@ -38,6 +38,8 @@
 // export default SiderArea;
 
 import { Layout, Menu } from "antd";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSteam } from "@fortawesome/free-brands-svg-icons";
 import React from "react";
 import {
   UploadOutlined,
@@ -53,27 +55,32 @@ const { Sider } = Layout;
 const SiderArea = (props) => {
   return (
     <Sider trigger={null} collapsible collapsed={props.collapsed}>
-      < img className={styles.logo} src={"/logo.png"} alt={"hhh"} />
+      <FontAwesomeIcon icon={faSteam} className={styles.logo} />
+      {/* <img className={styles.logo} src={"/logo.png"} alt={"hhh"} /> */}
 
       <Menu
         theme="dark"
         mode="inline"
         defaultSelectedKeys={["1"]}
         items={[
-            {
-              key: "1",
-              label: "nav 1",
-              icon: <UserOutlined />,
-              onclick: () => {window.location.href = "http://localhost:3080/api/auth/steam"},
+          {
+            key: "1",
+            label: "nav 1",
+            icon: <UserOutlined />,
+            onclick: () => {
+              window.location.href = "http://localhost:3080/api/auth/steam";
             },
-            {
-              key: "2",
-              label: "nav 2",
-              icon: <VideoCameraOutlined />,
-              onclick: () => {window.location.href = "http://localhost:3080/logout"},
-            }
+          },
+          {
+            key: "2",
+            label: "nav 2",
+            icon: <VideoCameraOutlined />,
+            onclick: () => {
+              window.location.href = "http://localhost:3080/logout";
+            },
+          },
         ]}
-        />
+      />
     </Sider>
   );
 };
