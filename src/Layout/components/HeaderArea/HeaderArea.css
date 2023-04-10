@@ -14,19 +14,19 @@
   background: #fff;
 }
 .header-layout {
-  display: flex;
-  /* padding: 5px auto; */
-  flex-direction: row;
+  /* display: flex; */
+  padding: 5px auto;
+  /* flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; */
 }
 
 .buttons {
   width: 150px;
   display: flex;
-  margin-right: 10px;
+  margin: auto 10px auto 950px;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding: 15px;
 }
 

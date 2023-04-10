@@ -30,7 +30,7 @@ const HeaderArea = (props) => {
 
   return (
     <Layout.Header className="header-background header-layout">
-      <FontAwesomeIcon icon={faSteam} className="icon" />
+      {/* <FontAwesomeIcon icon={faSteam} className="icon" /> */}
 
       <section className="buttons">
         <Button className="popup-button" type="primary">
