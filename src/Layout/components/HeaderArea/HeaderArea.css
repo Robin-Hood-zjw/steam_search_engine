@@ -24,7 +24,9 @@
 .buttons {
   width: 150px;
   display: flex;
-  margin: auto 10px auto 950px;
+  margin: auto 5px auto 80%;
+  padding: 10px;
+  /* padding: auto 90% auto 10%; */
   align-items: center;
   justify-content: space-between;
   padding: 15px;

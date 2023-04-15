@@ -11,10 +11,6 @@ const HeaderArea = (props) => {
   const [openLogin, setOpenLogin] = useState(false);
   const [loadLogin, setLoadLogin] = useState(false);
 
-  const showLogin = () => {
-    setOpenLogin(true);
-  };
-
   const handleLoginOk = () => {
     setLoadLogin(true);
     setTimeout(() => {
@@ -34,23 +30,13 @@ const HeaderArea = (props) => {
 
       <section className="buttons">
         <Button className="popup-button" type="primary">
-          {/* <a href="https://game-sothis-backend.herokuapp.com/api/auth/steam"> Sign in</a> */}
           <FontAwesomeIcon icon={faSteam} />
           <a href="http://localhost:3080/api/auth/steam"> Sign in</a>
         </Button>
 
         <Button className="popup-button">
-          {/* <a href="https://game-sothis-backend.herokuapp.com/logout">Sign out</a> */}
           <a href="http://localhost:3080/logout">Sign out</a>
         </Button>
-
-        {/* <Button className="popup-button" type="primary">
-          <a href="https://game-sothis-backend.herokuapp.com/api/auth/steam">Sign in</a>
-        </Button>
-
-        <Button className="popup-button" type="danger">
-          <a href="https://game-sothis-backend.herokuapp.com/signout">Sign out</a>
-        </Button> */}
       </section>
 
       <LoginModal
